@@ -1,0 +1,6 @@
+.idea
+/vendor
+/data
+/logs
+!/logs/php/.gitkeep
+!/logs/nginx/.gitkeep

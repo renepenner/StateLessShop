@@ -1,0 +1,38 @@
+web:
+  image: nginx:latest
+  environment:
+    VIRTUAL_HOST: dev.sls.de
+  ports:
+    - "80:80"
+  volumes:
+    - .:/var/www/html
+  links:
+    - php:php
+  command: nginx -c /var/www/html/conf/nginx/nginx.conf
+
+mysql:
+  image: mysql:latest
+  environment:
+    - MYSQL_ROOT_PASSWORD=pw
+    - MYSQL_DATABASE=demo
+  volumes:
+    - ./conf/mysql:/etc/mysql
+    - ./data/mysql:/var/lib/mysql
+
+php:
+  image: php:5.6-fpm
+  volumes:
+    - .:/var/www/html
+    - ./conf/php/php-fpm.conf:/usr/local/etc/php-fpm.conf
+    - ./conf/php/php.ini:/usr/local/etc/php/php.ini
+    - ./conf/php/conf.d:/usr/local/etc/php/conf.d
+  links:
+    - mysql:mysql
+    - sessions:sessions
+    - cache:cache
+
+sessions:
+  image: redis
+
+cache:
+  image: redis

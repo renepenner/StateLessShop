@@ -1,0 +1,29 @@
+{
+  "name": "RenePenner/StateLessShop",
+  "description": "High Performance eCommerce System based on Slim framework",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "René Penner",
+      "email": "rene@penner.name",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "slim/slim": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*",
+    "squizlabs/php_codesniffer": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "RenePenner\\StateLessShop\\": "app/src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": { "RenePenner\\StateLessShop\\Tests\\": "app/tests" }
+  },
+  "prefer-stable": true
+}
