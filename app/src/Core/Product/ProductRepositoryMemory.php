@@ -33,7 +33,7 @@ class ProductRepositoryMemory implements ProductRepositoryInterface
     public function add(Product $product)
     {
         $nativId = $product->getId()->getValue();
-        
+
         // check product already exist in Repo
         if (array_key_exists($nativId, $this->products)) {
             throw new ProductRepositoryException('Product with ID: ' . $nativId . ' already exist!');

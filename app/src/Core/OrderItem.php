@@ -1,6 +1,7 @@
 <?php
 namespace RenePenner\StateLessShop\Core;
 
+use RenePenner\StateLessShop\Core\Number\Integer;
 use RenePenner\StateLessShop\Core\Product\Product;
 
 /**
@@ -22,9 +23,9 @@ class OrderItem
      * OrderItem constructor.
      *
      * @param Product $product
-     * @param int $qty
+     * @param Integer $qty
      */
-    public function __construct(Product $product, $qty)
+    public function __construct(Product $product, Integer $qty)
     {
         $this->product = $product;
         $this->qty = $qty;

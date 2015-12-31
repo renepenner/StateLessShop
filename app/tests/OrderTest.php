@@ -49,11 +49,11 @@ class OrderTest extends PHPUnit_Framework_TestCase
         $orderItems = new OrderItemCollection();
 
         $p1 = new Product(new Integer(1));
-        $item1 = new OrderItem($p1, 2);
+        $item1 = new OrderItem($p1, new Integer(2));
         $orderItems->add($item1);
 
         $p2 = new Product(new Integer(2));
-        $item2 = new OrderItem($p2, 4);
+        $item2 = new OrderItem($p2, new Integer(4));
         $orderItems->add($item2);
 
         $orderState = OrderState::getInstance();
