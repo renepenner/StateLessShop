@@ -8,7 +8,7 @@ web:
     - .:/var/www/html
   links:
     - php:php
-  command: nginx -c /var/www/html/conf/nginx/nginx.conf
+  command: nginx -c /var/www/html/etc/nginx/nginx.conf
 
 mysql:
   image: mysql:latest
@@ -23,9 +23,9 @@ php:
   image: php:5.6-fpm
   volumes:
     - .:/var/www/html
-    - ./conf/php/php-fpm.conf:/usr/local/etc/php-fpm.conf
-    - ./conf/php/php.ini:/usr/local/etc/php/php.ini
-    - ./conf/php/conf.d:/usr/local/etc/php/conf.d
+    - ./etc/php/php-fpm.conf:/usr/local/etc/php-fpm.conf
+    - ./etc/php/php.ini:/usr/local/etc/php/php.ini
+    - ./etc/php/conf.d:/usr/local/etc/php/conf.d
   links:
     - mysql:mysql
     - sessions:sessions
