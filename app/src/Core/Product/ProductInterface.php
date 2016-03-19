@@ -3,6 +3,11 @@ namespace RenePenner\StateLessShop\Core\Product;
 
 use RenePenner\StateLessShop\Core\EntityObject\EntityObjectInterface;
 
+/**
+ * ProductInterface
+ *
+ * @package RenePenner\StateLessShop\Core\Product
+ */
 interface ProductInterface extends EntityObjectInterface
 {
     /**
@@ -11,7 +16,7 @@ interface ProductInterface extends EntityObjectInterface
     public function getName();
 
     /**
-     * @param $name
+     * @param string $name
      */
     public function setName($name);
 }

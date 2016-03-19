@@ -8,10 +8,13 @@ namespace RenePenner\StateLessShop\Core\Immutable;
 trait ImmutableTrait
 {
 
+    /** @var bool $constructed */
     private $constructed = false;
 
     /**
      * ImmutableTrait constructor.
+     *
+     * @throws ImmutableException
      */
     public function setConstructed()
     {

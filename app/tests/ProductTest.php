@@ -10,11 +10,12 @@ use RenePenner\StateLessShop\Core\Product\ProductRepositoryMemory;
 class ProductTest extends PHPUnit_Framework_TestCase
 {
 
-    /**
-     * @var Container
-     */
+    /** @var Container $container */
     protected $container;
 
+    /**
+     * Setup for Unittests.
+     */
     protected function setUp()
     {
         $this->container = new Container();

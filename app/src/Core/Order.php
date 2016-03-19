@@ -46,7 +46,7 @@ class Order
      *
      * @param Customer $customer
      * @param OrderItemCollection $orderItems
-     * @param OrderState $orderState
+     * @param OrderState|null $orderState
      */
     public function __construct(
         Customer $customer,

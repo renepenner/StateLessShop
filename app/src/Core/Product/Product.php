@@ -18,18 +18,31 @@ class Product implements ProductInterface
      */
     private $id;
 
+    /**
+     * @var string
+     */
     private $name;
 
+    /**
+     * Product constructor.
+     * @param int $id
+     */
     public function __construct(Integer $id)
     {
         $this->id = $id;
     }
 
+    /**
+     * @return int
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @return string
+     */
     public function getName()
     {
         return $this->name;
